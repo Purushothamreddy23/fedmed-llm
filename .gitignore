@@ -1,0 +1,26 @@
+# Environment
+.env
+*.env
+
+# Model weights (too large for Git — use S3)
+model/
+logs/*.npy
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# Node / React
+node_modules/
+frontend/dist/
+
+# Colab checkpoints
+*.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
