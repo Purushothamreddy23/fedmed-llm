@@ -24,6 +24,6 @@ frontend/dist/
 # OS
 .DS_Store
 Thumbs.db
-"model/lora_adapter_final/" 
-"*.bin" 
-"*.safetensors" 
+model/lora_adapter_final/
+*.bin
+*.safetensors
