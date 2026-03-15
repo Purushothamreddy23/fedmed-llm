@@ -5,7 +5,7 @@ After federated training completes, this script:
 2. Merges them into base Phi-2 using peft.merge_and_unload()
 3. Saves the final standalone model to /model/fedmed_phi2/
 
-Run after Day 2 training:
+Run this after Day 2 training:
     python scripts/merge_model.py
 """
 
