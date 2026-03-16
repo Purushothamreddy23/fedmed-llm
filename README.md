@@ -49,45 +49,45 @@
 │                        FedMed-LLM Architecture                      │
 ├─────────────────────────────────────────────────────────────────────┤
 │                                                                     │
-│  ┌──────────────┐     ┌──────────────┐     ┌──────────────┐        │
-│  │  Hospital A   │     │  Hospital B   │     │  Hospital C   │       │
-│  │  (Client 1)   │     │  (Client 2)   │     │  (Client 3)   │      │
-│  │              │     │              │     │              │        │
-│  │  Local Data   │     │  Local Data   │     │  Local Data   │       │
-│  │  MedQuAD      │     │  MedQuAD      │     │  MedQuAD      │      │
-│  │  Partition 1  │     │  Partition 2  │     │  Partition 3  │       │
-│  └──────┬───────┘     └──────┬───────┘     └──────┬───────┘        │
-│         │  LoRA Weights       │  LoRA Weights      │  LoRA Weights  │
-│         └─────────────┬───────┴──────┬─────────────┘               │
+│  ┌──────────────┐     ┌──────────────┐     ┌──────────────┐         │
+│  │  Hospital A  │     │  Hospital B  │     │  Hospital C  │         │
+│  │  (Client 1)  │     │  (Client 2)  │     │  (Client 3)  │         │
+│  │              │     │              │     │              │         │
+│  │  Local Data  │     │  Local Data  │     │  Local Data  │         │
+│  │  MedQuAD     │     │  MedQuAD     │     │  MedQuAD     │         │
+│  │  Partition 1 │     │  Partition 2 │     │  Partition 3 │         │
+│  └──────┬───────┘     └──────┬───────┘     └──────┬───────┘         │
+│         │  LoRA Weights      │  LoRA Weights      │  LoRA Weights   │
+│         └─────────────┬──────┴──────┬─────────────┘                 │
 │                       ▼              ▼                              │
 │              ┌────────────────────────────┐                         │
-│              │    Flower FL Server         │                        │
-│              │    FedAvg Aggregation       │                        │
-│              │    + DP Noise Injection     │                        │
-│              │    (σ = 0.01 Gaussian)      │                        │
+│              │    Flower FL Server        │                         │
+│              │    FedAvg Aggregation      │                         │
+│              │    + DP Noise Injection    │                         │
+│              │    (σ = 0.01 Gaussian)     │                         │
 │              └────────────┬───────────────┘                         │
 │                           ▼                                         │
 │              ┌────────────────────────────┐                         │
 │              │    Merged Phi-2 + LoRA     │                         │
-│              │    Production Model         │                        │
+│              │    Production Model        │                         │
 │              └────────────┬───────────────┘                         │
 │                           ▼                                         │
-│  ┌──────────────────────────────────────────────────────────┐      │
-│  │                   Deployment Stack                        │      │
-│  │                                                          │      │
-│  │  ┌─────────────┐   ┌──────────────┐   ┌──────────────┐  │      │
-│  │  │   React +    │──▶│   FastAPI     │──▶│  Phi-2 +     │  │      │
-│  │  │   Tailwind   │   │   (SSE)      │   │  LoRA Model  │  │      │
-│  │  │   Frontend   │◀──│   Backend    │◀──│  Inference   │  │      │
-│  │  └─────────────┘   └──────┬───────┘   └──────────────┘  │      │
-│  │                           │                              │      │
-│  │                    ┌──────▼───────┐                      │      │
-│  │                    │   Supabase    │                      │      │
-│  │                    │   (Auth + DB) │                      │      │
-│  │                    └──────────────┘                      │      │
-│  └──────────────────────────────────────────────────────────┘      │
+│  ┌──────────────────────────────────────────────────────────┐       │
+│  │                   Deployment Stack                       │       │
+│  │                                                          │       │
+│  │  ┌─────────────┐    ┌─────────────┐   ┌──────────────┐   │       │
+│  │  │   React +   │──▶│   FastAPI    │──▶│  Phi-2 +    │   │       │
+│  │  │   Tailwind  │   │   (SSE)      │   │  LoRA Model  │   │       │
+│  │  │   Frontend  │◀──│   Backend    │◀──│  Inference  │   │       │
+│  │  └─────────────┘   └──────┬───────┘   └──────────────┘   │       │
+│  │                           │                              │       │
+│  │                    ┌──────▼───────┐                      │       │
+│  │                    │   Supabase   │                      │       │
+│  │                    │   (Auth + DB)│                      │       │
+│  │                    └──────────────┘                      │       │
+│  └──────────────────────────────────────────────────────────┘       │
 │                                                                     │
-│                    Docker Compose on AWS EC2                         │
+│                    Docker Compose on AWS EC2                        │
 └─────────────────────────────────────────────────────────────────────┘
 ```
 
