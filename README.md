@@ -34,10 +34,7 @@
 
 ---
 
-## Demo
 
-> 🎥 **[Watch the 3-minute demo on Loom →](#)**
-<!-- Replace # with your actual Loom link -->
 
 <p align="center">
   <img src="docs/screenshots/chat_demo.gif" alt="FedMed-LLM Chat Demo" width="700"/>
@@ -197,7 +194,7 @@ The winning configuration was used for the final 15-round production run.
 ### Loss Curve
 
 <p align="center">
-  <img src="docs/loss_curve_v3.png" alt="Training Loss Curve — 15 Federated Rounds" width="600"/>
+  <img src="docs/loss_curve_v2.png" alt="Training Loss Curve — 15 Federated Rounds" width="600"/>
 </p>
 
 ---
@@ -494,9 +491,6 @@ This project builds on the research foundations from the above publication, exte
 
 B.Tech Computer Science — Amrita Vishwa Vidyapeetham
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com/in/yourprofile)
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=flat-square&logo=github)](https://github.com/yourusername)
-[![AWS](https://img.shields.io/badge/AWS-Cloud_Practitioner-FF9900?style=flat-square&logo=amazonaws)](https://aws.amazon.com/certification/)
 
 ---
 
