@@ -1,6 +1,6 @@
 """
 clients/fl_client.py
-Flower Federated Learning Client for FedMed-LLM
+Flower Federated Learning Client for our FedMed-LLM
 One instance of this runs per hospital node (A, B, C)
 
 Usage (Day 2):
