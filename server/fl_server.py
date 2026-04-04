@@ -3,7 +3,7 @@ server/fl_server.py
 Flower Federated Learning Server for FedMed-LLM
 Runs FedAvg across 3 hospital clients for 5 rounds
 
-Usage (Day 2):
+Usage:
     python server/fl_server.py
 """
 
