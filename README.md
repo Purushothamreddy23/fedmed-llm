@@ -12,7 +12,7 @@
 <h1 align="center">FedMed-LLM</h1>
 
 <p align="center">
-  <strong>Privacy-Preserving Medical Q&A via Federated LLM Fine-Tuning</strong>
+  <strong>Privacy Preserving Medical Q&A via Federated LLM FineTuning </strong>
 </p>
 
 <p align="center">
